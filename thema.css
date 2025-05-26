@@ -280,9 +280,6 @@ header > nav ul.mobil > li {
     cursor: pointer;
 }
 
-body.sc.menushow header {
-    min-height: 80px;
-}
 
 body.sc.menushow header > nav > div:first-child {
     display: none;
@@ -298,14 +295,40 @@ body.sc header {
     height: 0;
     left: 0;
     background: rgba(255, 255, 255, 0.95);
-    transition: height 0.3s;
+    transition: transform 0.3s;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(97, 97, 97, 0.20);
     backdrop-filter: blur(5px);
+    transform: translateY(-100vmax);
+}
+
+body.sc.menushow header {
+    min-height: 80px;
+    transform: translateY(0);
 }
 
 body.sc.menushow header > nav ul.mobil > li {
     color: var(--b12);
+}
+
+header > nav ul > li.logo > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > nav ul > li.logo > a > img {
+    width: 80px;
+    object-fit: contain;
+}
+
+body:is(.sc,.menuopen) header > nav ul > li.logo > a > img[light] {
+    display:none;
+}
+
+body:not(.menuopen):not(.sc) header > nav ul > li.logo > a > img[dark] {
+    display:none;
 }
 
 /*Header Bitiş*/
@@ -449,6 +472,10 @@ dg-slider > div.slide > div.text > span.detay > ul > li > span:first-child {
 }
 
 /*Slider Bitiş*/
+
+section#services {
+  scroll-margin-top: 180px;
+}
 
 footer {
     position: relative;
