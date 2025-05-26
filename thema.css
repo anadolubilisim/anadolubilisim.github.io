@@ -331,6 +331,7 @@ body:not(.menuopen):not(.sc) header > nav ul > li.logo > a > img[dark] {
     display:none;
 }
 
+
 /*Header Bitiş*/
 
 main{
@@ -470,6 +471,71 @@ dg-slider > div.slide > div.text > span.detay > ul > li > span:nth-child(2) {
 dg-slider > div.slide > div.text > span.detay > ul > li > span:first-child {
     font-size: 2rem;
 }
+
+dg-slider:after {
+    content: '';
+    height: 50px;
+    width: 30px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    left: calc(50% - 15px);
+    bottom: 150px;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+dg-slider:before{
+    content: '';
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    left: calc(50% - 3px);
+    bottom: 160px;
+    z-index: 2;
+    box-sizing: border-box;
+    background: #fff;
+    transform: translateY(0px);
+    animation:mouse infinite 3s
+}
+
+@keyframes mouse{
+     0% {
+         transform: translateY(0px);
+      }
+      50% {
+    transform: translateY(-22px);
+      }
+         100% {
+    transform: translateY(0px);
+      }
+}
+
+
+/* dg-slider > div.slide.aktif > div.text > span:first-child {
+    animation: yaziyaz 2s steps(21), imlec 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+@keyframes yaziyaz {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes imlec {
+  50% {
+    border-color: transparent
+  }
+} */
+
 
 /*Slider Bitiş*/
 
