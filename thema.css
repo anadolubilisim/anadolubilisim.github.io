@@ -813,4 +813,10 @@ section#contact icerik > div.harita > iframe {
     margin: 0 16px;
     box-sizing: border-box;
 }
+
+section#contact baslik > img {
+    width: 80%;
+    object-fit: contain;
+}
+
 }
