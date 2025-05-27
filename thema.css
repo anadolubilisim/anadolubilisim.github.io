@@ -394,7 +394,7 @@ dg-slider {
     position: relative;
     display: block;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     overflow: hidden;
 }
 
@@ -434,42 +434,32 @@ dg-slider > div.slide > div.text {
 }
 
 dg-slider > div.slide > div.text > span:first-child{
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-family:var(--font2);
+    line-height: 1;
 }
 
 dg-slider > div.slide > div.text > span.detay {
     display: block;
     width: 100%;
-    padding-top: 32px;
+    padding: 32px 0;
 }
 
-dg-slider > div.slide > div.text > span.detay > ul {
+dg-slider ul.keywords {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-dg-slider > div.slide > div.text > span.detay > ul > li {
-    width: 128px;
-    height: 128px;
+dg-slider ul.keywords > li {
     border: 1px solid #fff;
-    padding: 16px;
-    box-sizing: border-box;
-    border-radius: 1rem;
-    margin-right: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-dg-slider > div.slide > div.text > span.detay > ul > li > span:nth-child(2) {
-    font-size: 0.8rem;
-}
-
-dg-slider > div.slide > div.text > span.detay > ul > li > span:first-child {
-    font-size: 2rem;
+    border-radius: 20px;
+    padding: 4px 16px;
+    margin: 6px;
+    font-size: 0.9rem;
+    user-select: none;
+    cursor: default;
+    white-space: pre;
 }
 
 dg-slider:after {
@@ -699,8 +689,12 @@ section#contact icerik > div > ul > li > span:first-child {
 
 @media only screen and (max-width: 1023px) { /*Mobil*/
 
-        div[layout] {
+    div[layout] {
         width: 100%;
+    }
+
+    dg-slider ul.keywords{
+        display: none;
     }
 
     header{
