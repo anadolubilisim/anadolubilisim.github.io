@@ -35,4 +35,4 @@ setInterval(() => {
     sonraki_slide = aktif_slide.nextElementSibling || document.querySelector("dg-slider > div:first-child");
     sonraki_slide.classList.add("aktif");
     aktif_slide.classList.remove("aktif");
-}, 5000);
+}, 8000);
